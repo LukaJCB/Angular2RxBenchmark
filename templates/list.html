@@ -1,0 +1,17 @@
+<header>
+    <h1>BMI Calculator</h1>
+</header>
+
+<section>
+    <ul>
+        <li *ngFor="#f of forms | async">
+            <form [form]="f"></form> 
+        </li>
+    </ul>
+    <hr/>
+    <button (click)="addNewPerson()">Add new Person</button>
+    <span>Number of people: {{ numberOfPeople | async }}</span>
+</section>    
+
+<footer>
+</footer>

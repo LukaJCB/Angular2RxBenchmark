@@ -1,0 +1,16 @@
+<div>
+    <h2>{{ form.name | async }}</h2>
+    <form [ngFormModel]="controlGroup">
+        <label>Name:</label>
+        <input type="text" ngControl="name"><br/>
+        
+        <label>Height (cm):</label>
+        <input type="number" ngControl="height"><br/>
+        
+        <label>Weight (kg):</label>
+        <input type="number" ngControl="weight"><br/>
+    </form>
+    
+    <div><strong> Body Mass Index (BMI) = {{ form.bmi | async }}</strong></div>
+    <div><strong> Category: {{ form.category | async }} </strong></div>
+</div>
