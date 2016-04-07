@@ -19,16 +19,14 @@ export class ListComponent {
      
     ngOnInit() {
        
-        
         const startForm = [];
-        for (let i = 0; i < 10000; i++){
+        for (let i = 0; i < 100; i++){
             startForm[i] = i;
         }
         this.forms = startForm;
         
-      
-         
     }
+    
     
     addNewPerson: () => any;
     

@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -33,6 +34,9 @@ var FormComponent = (function () {
         else
             return "Obese";
     };
+    FormComponent.prototype.ngDoCheck = function () {
+        console.log("checked!");
+    };
     FormComponent = __decorate([
         core_1.Component({
             selector: "form",
@@ -41,6 +45,6 @@ var FormComponent = (function () {
         __metadata('design:paramtypes', [])
     ], FormComponent);
     return FormComponent;
-})();
+}());
 exports.FormComponent = FormComponent;
 //# sourceMappingURL=form.component.js.map
