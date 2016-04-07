@@ -1,16 +1,16 @@
 <div>
-    <h2>{{ form.name | async }}</h2>
-    <form [ngFormModel]="controlGroup">
+    <h2>{{ form.name }}</h2>
+    <form>
         <label>Name:</label>
-        <input type="text" ngControl="name"><br/>
+        <input type="text" [(ngModel)]="form.name"><br/>
         
         <label>Height (cm):</label>
-        <input type="number" ngControl="height"><br/>
+        <input type="number" [(ngModel)]="form.height"><br/>
         
         <label>Weight (kg):</label>
-        <input type="number" ngControl="weight"><br/>
+        <input type="number" [(ngModel)]="form.weight"><br/>
     </form>
     
-    <div><strong> Body Mass Index (BMI) = {{ form.bmi | async }}</strong></div>
-    <div><strong> Category: {{ form.category | async }} </strong></div>
+    <div><strong> Body Mass Index (BMI) = {{ getBmi() }}</strong></div>
+    <div><strong> Category: {{ getCategory() }} </strong></div>
 </div>

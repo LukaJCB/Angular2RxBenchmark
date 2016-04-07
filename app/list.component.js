@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9,26 +8,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('angular2/core');
-var Rx_1 = require('rxjs/Rx');
-var form_model_1 = require('./form.model');
 var form_component_1 = require('./form.component');
 require('rxjs/Rx');
 var ListComponent = (function () {
     function ListComponent() {
     }
     ListComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        var peopleSignal = Rx_1.Observable.create(function (observer) {
-            _this.addNewPerson = function () { return observer.next(); };
-        }).share();
         var startForm = [];
         for (var i = 0; i < 10000; i++) {
-            startForm[i] = new form_model_1.Form();
+            startForm[i] = i;
         }
-        this.forms = peopleSignal.map(function () { return [new form_model_1.Form()]; })
-            .startWith(startForm)
-            .scan(function (acc, value) { return acc.concat(value); });
-        this.numberOfPeople = this.forms.map(function (forms) { return forms.length; });
+        this.forms = startForm;
     };
     ListComponent = __decorate([
         core_1.Component({
@@ -39,6 +29,6 @@ var ListComponent = (function () {
         __metadata('design:paramtypes', [])
     ], ListComponent);
     return ListComponent;
-}());
+})();
 exports.ListComponent = ListComponent;
 //# sourceMappingURL=list.component.js.map

@@ -1,37 +1,27 @@
-import {Component, Input, ChangeDetectionStrategy} from 'angular2/core'
+import {Component, Input} from 'angular2/core'
 import {Validators, FormBuilder,Control, ControlGroup} from 'angular2/common';
-import {Observable} from 'rxjs/Rx';
 import {Form} from './form.model';
-import 'rxjs/Rx';
 
 
 @Component({
     selector: "form",
-    templateUrl: 'templates/form.html',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    templateUrl: 'templates/form.html'
 })
 export class FormComponent {
-    controlGroup: ControlGroup;
-    nameControl: Control = new Control("");
     
-    @Input('form') form: Form
     
-    constructor(fb: FormBuilder) {
-        this.controlGroup = fb.group({
-            "name": this.nameControl,
-            "height": new Control(""),
-            "weight": new Control("")
-        });
+    form: Form
+    
+    constructor(){
+        this.form = new Form();
     }
     
-    ngOnInit(){
-        this.form.name = this.nameControl.valueChanges;
-        
-        this.form.bmi = this.controlGroup.valueChanges
-        .map(value => this.toBmi(value['weight'], value['height']))
-        .filter(value => value > 0);
-        
-        this.form.category = this.form.bmi.map(bmi => this.toCategory(bmi));
+    getBmi(): number {
+        return this.toBmi(this.form.weight,this.form.height);
+    }
+    
+    getCategory(): string {
+        return this.toCategory(this.toBmi(this.form.weight,this.form.height));
     }
     
     toBmi(weight: number, height: number): number {

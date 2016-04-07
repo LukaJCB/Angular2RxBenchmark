@@ -13,27 +13,20 @@ import 'rxjs/Rx';
 })
 export class ListComponent {
     
-    forms: Observable<Form[]>;
+    forms: number[];
     
-    numberOfPeople: Observable<number>;
     
      
     ngOnInit() {
        
-        const peopleSignal: Observable<{}> = Observable.create(observer => {
-            this.addNewPerson = () => observer.next();
-        }).share();
         
         const startForm = [];
         for (let i = 0; i < 10000; i++){
-            startForm[i] = new Form();
+            startForm[i] = i;
         }
+        this.forms = startForm;
         
-        this.forms =  peopleSignal.map(() => [new Form()])
-        .startWith(startForm)
-        .scan((acc: Form[], value) => acc.concat(value));
-         
-        this.numberOfPeople = this.forms.map(forms => forms.length);
+      
          
     }
     

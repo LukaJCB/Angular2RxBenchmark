@@ -4,13 +4,12 @@
 
 <section>
     <ul>
-        <li *ngFor="#f of forms | async">
-            <form [form]="f"></form> 
+        <li *ngFor="#f of forms">
+            <form></form> 
         </li>
     </ul>
     <hr/>
     <button (click)="addNewPerson()">Add new Person</button>
-    <span>Number of people: {{ numberOfPeople | async }}</span>
 </section>    
 
 <footer>
