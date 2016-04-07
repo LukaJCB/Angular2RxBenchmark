@@ -49,7 +49,7 @@ exports.FormComponent = FormComponent;
 },{"./form.model":2,"angular2/core":7}],2:[function(require,module,exports){
 var Form = (function () {
     function Form() {
-        this.name = "Person";
+        this.name = "";
     }
     return Form;
 })();

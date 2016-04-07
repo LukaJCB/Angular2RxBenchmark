@@ -1,6 +1,6 @@
 var Form = (function () {
     function Form() {
-        this.name = "Person";
+        this.name = "";
     }
     return Form;
 })();

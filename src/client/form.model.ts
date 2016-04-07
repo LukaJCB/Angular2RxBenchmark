@@ -1,6 +1,6 @@
 
 export class Form {
-    name: string = "Person";
+    name: string = "";
     height: number;
     weight: number;
 }
