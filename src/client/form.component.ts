@@ -35,8 +35,4 @@ export class FormComponent {
         else if (bmi < 30) return "Overweight";
         else return "Obese";
     }
-    
-    ngDoCheck(){
-        console.log("checked!");
-    }
 }

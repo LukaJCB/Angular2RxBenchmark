@@ -1,4 +1,3 @@
-"use strict";
 var list_component_1 = require('./list.component');
 var browser_1 = require('angular2/platform/browser');
 var router_1 = require('angular2/router');

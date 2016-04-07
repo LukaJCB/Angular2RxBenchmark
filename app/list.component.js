@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16,7 +15,7 @@ var ListComponent = (function () {
     }
     ListComponent.prototype.ngOnInit = function () {
         var startForm = [];
-        for (var i = 0; i < 100; i++) {
+        for (var i = 0; i < 10000; i++) {
             startForm[i] = i;
         }
         this.forms = startForm;
@@ -30,6 +29,6 @@ var ListComponent = (function () {
         __metadata('design:paramtypes', [])
     ], ListComponent);
     return ListComponent;
-}());
+})();
 exports.ListComponent = ListComponent;
 //# sourceMappingURL=list.component.js.map

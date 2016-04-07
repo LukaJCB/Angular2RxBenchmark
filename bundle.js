@@ -35,9 +35,6 @@ var FormComponent = (function () {
         else
             return "Obese";
     };
-    FormComponent.prototype.ngDoCheck = function () {
-        console.log("checked!");
-    };
     FormComponent = __decorate([
         core_1.Component({
             selector: "form",
@@ -50,13 +47,12 @@ var FormComponent = (function () {
 exports.FormComponent = FormComponent;
 
 },{"./form.model":2,"angular2/core":7}],2:[function(require,module,exports){
-"use strict";
 var Form = (function () {
     function Form() {
         this.name = "";
     }
     return Form;
-}());
+})();
 exports.Form = Form;
 
 },{}],3:[function(require,module,exports){
@@ -78,7 +74,7 @@ var ListComponent = (function () {
     }
     ListComponent.prototype.ngOnInit = function () {
         var startForm = [];
-        for (var i = 0; i < 100; i++) {
+        for (var i = 0; i < 10000; i++) {
             startForm[i] = i;
         }
         this.forms = startForm;

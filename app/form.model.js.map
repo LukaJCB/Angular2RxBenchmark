@@ -1,1 +1,1 @@
-{"version":3,"file":"form.model.js","sourceRoot":"","sources":["../src/client/form.model.ts"],"names":[],"mappings":";AACA;IAAA;QACI,SAAI,GAAW,EAAE,CAAC;IAGtB,CAAC;IAAD,WAAC;AAAD,CAAC,AAJD,IAIC;AAJY,YAAI,OAIhB,CAAA"}
+{"version":3,"file":"form.model.js","sourceRoot":"","sources":["../src/client/form.model.ts"],"names":["Form","Form.constructor"],"mappings":"AACA;IAAAA;QACIC,SAAIA,GAAWA,EAAEA,CAACA;IAGtBA,CAACA;IAADD,WAACA;AAADA,CAACA,AAJD,IAIC;AAJY,YAAI,OAIhB,CAAA"}
